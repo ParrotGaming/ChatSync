@@ -22,7 +22,7 @@ public class Main extends JavaPlugin {
 	public static String cacheFileArgs;
 	
 	public static void main(String[] args) throws LoginException {
-		System.out.println(" ");
+		
 	}
 	
     @Override
@@ -62,14 +62,12 @@ public class Main extends JavaPlugin {
   		      myReader.close();
   		      Bukkit.broadcastMessage("[ChatSync] Connection to Discord Successful");
   		    } catch (FileNotFoundException e) {
-  		      System.out.println("An error occurred.");
+    		  Bukkit.broadcastMessage("[ChatSync] Could not connect to Discord");
   		      e.printStackTrace();
   		    }
 		} catch (LoginException e) {
 			e.printStackTrace();
 		}
-		
-    	System.out.println("Online");
     }
 
     @Override
@@ -82,6 +80,5 @@ public class Main extends JavaPlugin {
 		
     	TextChannel textChannel = jda.getGuildById(readerArgs[1]).getTextChannelsByName(readerArgs[2],true).get(0);
 		textChannel.sendMessage(eb.build()).queue();
-    	System.out.println("Shutting Down...");
     }
 }

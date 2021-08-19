@@ -23,12 +23,10 @@ public class EnableBot implements CommandExecutor{
 			try {
 			      File myObj = new File("chatsync-data.txt");
 			      if (myObj.createNewFile()) {
-			        System.out.println("File created: " + myObj.getName());
 			        FileWriter myWriter = new FileWriter("chatsync-data.txt");
 			        myWriter.write(args[0] + " " + args[1] + " " + args[2]);
 			        myWriter.close();
 			        Main.cacheFileArgs = args[0] + " " + args[1] + " " + args[2];
-			        System.out.println("Successfully wrote to the file.");
 			        try {
 						Main.jda = JDABuilder.createDefault(args[0]).build();
 						Main.jda.getPresence().setStatus(OnlineStatus.ONLINE);
@@ -50,11 +48,9 @@ public class EnableBot implements CommandExecutor{
 						e.printStackTrace();
 					}	
 			      } else {
-			        System.out.println("File already exists.");
 			        sender.sendMessage("A bot is already configured for this server");
 			      }
 			    } catch (IOException e) {
-			      System.out.println("An error occurred.");
 			      e.printStackTrace();
 			    }
 		    return true;	
