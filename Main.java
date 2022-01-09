@@ -57,7 +57,7 @@ public class Main extends JavaPlugin {
 	  		    cacheFileArgs = readerArgs[0] + " " + readerArgs[1] + " " + readerArgs[2];
 	  		    
 				TextChannel textChannel = jda.getGuildById(readerArgs[1]).getTextChannelsByName(readerArgs[2],true).get(0);
-				textChannel.sendMessage(eb.build()).queue();
+				textChannel.sendMessageEmbeds(eb.build()).queue();
   		      }
   		      myReader.close();
   		      Bukkit.broadcastMessage("[ChatSync] Connection to Discord Successful");
@@ -79,6 +79,6 @@ public class Main extends JavaPlugin {
 		eb.setColor(Color.black);
 		
     	TextChannel textChannel = jda.getGuildById(readerArgs[1]).getTextChannelsByName(readerArgs[2],true).get(0);
-		textChannel.sendMessage(eb.build()).queue();
+		textChannel.sendMessageEmbeds(eb.build()).queue();
     }
 }

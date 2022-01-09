@@ -37,7 +37,7 @@ public class ChatListener implements Listener {
 		
 		String[] readerArgs = Main.cacheFileArgs.split(" ");
 		TextChannel textChannel = Main.jda.getGuildById(readerArgs[1]).getTextChannelsByName(readerArgs[2],true).get(0);
-        textChannel.sendMessage(eb.build()).queue();
+        textChannel.sendMessageEmbeds(eb.build()).queue();
 	}
 	@EventHandler
 	public void PlayerJoinEvent(PlayerJoinEvent event) {
@@ -50,7 +50,7 @@ public class ChatListener implements Listener {
 		
 		String[] readerArgs = Main.cacheFileArgs.split(" ");
 		TextChannel textChannel = Main.jda.getGuildById(readerArgs[1]).getTextChannelsByName(readerArgs[2],true).get(0);
-        textChannel.sendMessage(eb.build()).queue();
+        textChannel.sendMessageEmbeds(eb.build()).queue();
 	}
 	@EventHandler
 	public void PlayerDeathEvent(PlayerDeathEvent event) {
@@ -61,6 +61,6 @@ public class ChatListener implements Listener {
 		
 		String[] readerArgs = Main.cacheFileArgs.split(" ");
 		TextChannel textChannel = Main.jda.getGuildById(readerArgs[1]).getTextChannelsByName(readerArgs[2],true).get(0);
-        textChannel.sendMessage(eb.build()).queue();
+        textChannel.sendMessageEmbeds(eb.build()).queue();
 	}
 }
