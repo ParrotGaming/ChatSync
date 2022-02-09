@@ -7,6 +7,10 @@
 - Get notified when a player joins or leaves your server
 - Sync messages between a channel in your discord server and the chat in your minecraft server
 
+### Installation
+Reffer to the wiki for steps on how to setup and use the plugin
+
+https://github.com/ParrotGaming/ChatSync/wiki
 
 
 ## Examples
