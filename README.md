@@ -1,13 +1,19 @@
 # ChatSync
+### An all in one solution for syncing your minecraft and discrod servers
 
->Get notified about your server's status
+### Features
 
+- Get notified when your server goes down or comes online
+- Get notified when a player joins or leaves your server
+- Sync messages between a channel in your discord server and the chat in your minecraft server
+
+
+
+## Examples
 ![Demo Image 1](https://gcdnb.pbrd.co/images/6M8fhUF8YiTr.png?o=1)
 
->Get notified when players join and leave your server
 
 ![Demo Image 2](https://gcdnb.pbrd.co/images/niWI5PSTVJ2Q.png?o=1)
 
->Sync the chat between Discord and Minecraft
 
 ![Demo Image 3](https://gcdnb.pbrd.co/images/5AW2vOKaj3z9.png?o=1)
